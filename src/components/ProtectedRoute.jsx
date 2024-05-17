@@ -13,7 +13,7 @@ function ProtectedRoute({children}) {
 
     useEffect(() => {
         auth().catch(() => setIsAuthorized(false))
-    })
+    },[])
 
     // refresh access token automatically
     const refreshToken = async () => {
