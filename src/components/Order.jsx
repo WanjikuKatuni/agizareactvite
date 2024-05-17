@@ -9,6 +9,24 @@ function Order({order, onDelete, customerPhoneNumber}) {
   const formattedDate = new Date(order.created_at).toLocaleDateString("en-US")
   const formattedTime = new Date(order.created_at).toLocaleTimeString("en-US")
 
+
+  // const handleConfirmOrder = () => {
+  //   // send a message to the customer's phone number
+  //   sendMessage(customerPhoneNumber);
+  // };
+
+  // const sendMessage = (phoneNumber) => {
+  //   console.log(`Sending message to ${phoneNumber}`);
+
+  //   twilioClient.messages.create({
+  //     body: 'Your order has been confirmed.',
+  //     from: '+16362541448',
+  //     to: phoneNumber
+  //   }).then(message => console.log(message.sid))
+  //   .catch(err => console.error(err));
+  // };
+
+
   return (
     <>
     <tr>
