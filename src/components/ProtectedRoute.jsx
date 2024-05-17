@@ -17,6 +17,7 @@ function ProtectedRoute({children}) {
 
     // refresh access token automatically
     const refreshToken = async () => {
+        const refreshToken = localStorage.getItem(REFRESH_TOKEN)
         try {
             // send request to api to refresh token
             const res = await api.post("/api/token/refresh/", {
